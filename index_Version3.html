@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Spiritual Science</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Spiritual Science</h1>
+    <div id="search-wrap">
+      <input id="search-input" type="text" placeholder="Search / Enter admin key..." />
+      <button id="search-btn">Go</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="subscribe">
+      <h2>Subscribe to our newsletter</h2>
+      <form id="subscribe-form">
+        <input id="email-input" type="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="subscribe-msg"></p>
+    </section>
+
+    <section id="content">
+      <h2>Motivational Texts</h2>
+      <div id="cards"></div>
+
+      <h2>Media</h2>
+      <div id="media-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; Spiritual Science</small>
+  </footer>
+
+  <script type="module" src="js/firebase-init.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

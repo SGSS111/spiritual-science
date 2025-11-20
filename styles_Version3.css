@@ -1,0 +1,31 @@
+:root{
+  --accent:#5a3d8b;
+  --muted:#666;
+  --bg:#f7f6fb;
+  --card:#ffffff;
+}
+
+*{box-sizing:border-box;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+body{margin:0;background:var(--bg);color:#222}
+header{background:var(--card);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+h1{margin:0;color:var(--accent)}
+#search-wrap{display:flex;gap:8px}
+#search-input{padding:8px 12px;border-radius:6px;border:1px solid #ddd;width:240px}
+#search-btn{padding:8px 12px;background:var(--accent);color:#fff;border:none;border-radius:6px;cursor:pointer}
+
+main{max-width:980px;margin:24px auto;padding:0 16px}
+section{background:var(--card);padding:16px;border-radius:8px;margin-bottom:16px;box-shadow:0 1px 6px rgba(0,0,0,0.04)}
+#cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{padding:12px;border-radius:6px;background:#fff;border:1px solid #ececec}
+.card h3{margin:0 0 8px 0;color:var(--accent)}
+#media-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.media-item{padding:8px;border-radius:6px;background:#fff;border:1px solid #ececec}
+
+form{display:flex;flex-direction:column;gap:8px}
+input[type="text"],input[type="email"],select,textarea{padding:8px;border-radius:6px;border:1px solid #ddd}
+button{padding:10px;border-radius:6px;border:none;background:var(--accent);color:#fff;cursor:pointer}
+.admin-section{margin-bottom:18px}
+#subscribers-list{max-height:220px;overflow:auto;border:1px solid #eee;padding:8px;border-radius:6px}
+.subscriber{display:flex;justify-content:space-between;align-items:center;padding:6px;border-bottom:1px solid #f1f1f1}
+.subscriber button{padding:6px 8px;font-size:13px}
+small{color:var(--muted)}
