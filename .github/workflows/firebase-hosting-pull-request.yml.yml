@@ -1,25 +1,18 @@
-name: Deploy Preview Channel on PR
+name: Deploy Preview on PR
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, closed]
     branches:
       - main
 
 jobs:
-  build_and_preview:
-    if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
+  preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Install dependencies
-        run: npm ci
-        # Remove above line if you don't have package.json / npm
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SPIRITUALSCIENCE }}
           projectId: spiritualscience
-          channelId: pr-${{ github.event.pull_request.number }}
