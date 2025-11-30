@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spiritual Science</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Search bar (also secret admin trigger) -->
+  <div class="search-container">
+    <input type="text" id="adminSearch" placeholder="Search lessons, media..." autocomplete="off"/>
+    <i class="fas fa-search"></i>
+  </div>
+
+  <header>
+    <h1>Spiritual Science</h1>
+    <p>Awakening the Soul through Truth & Wisdom</p>
+  </header>
+
+  <nav class="nav-icons">
+    <div class="nav-item" data-page="home"><i class="fas fa-home"></i><span>Home</span></div>
+    <div class="nav-item" data-page="lessons"><i class="fas fa-book"></i><span>Lessons</span></div>
+    <div class="nav-item" data-page="media"><i class="fas fa-play-circle"></i><span>Media</span></div>
+    <div class="nav-item" data-page="subscribe"><i class="fas fa-envelope"></i><span>Subscribe</span></div>
+    <div class="nav-item" data-page="feedback"><i class="fas fa-comment"></i><span>Feedback</span></div>
+  </nav>
+
+  <main id="content">
+    <!-- Home Page -->
+    <section id="home" class="page active">
+      <h2>Welcome, Seeker of Truth</h2>
+      <p>Explore lessons on Patience, Humility, Love, Faith, and more.</p>
+      <div class="cards">
+        <div class="card" data-page="lessons">Lessons</div>
+        <div class="card" data-page="media">Songs & Videos</div>
+        <div class="card" data-page="subscribe">Join Newsletter</div>
+      </div>
+    </section>
+
+    <!-- Lessons Page -->
+    <section id="lessons" class="page">
+      <h2>Spiritual Lessons</h2>
+      <div id="lessonsContainer" class="lessons-grid"></div>
+    </section>
+
+    <!-- Media Page -->
+    <section id="media" class="page">
+      <h2>Media Gallery</h2>
+      <div id="mediaContainer" class="media-grid"></div>
+    </section>
+
+    <!-- Subscribe Page -->
+    <section id="subscribe" class="page">
+      <h2>Receive Motivational Newsletters</h2>
+      <input type="email" id="emailInput" placeholder="Your email"/>
+      <button id="subscribeBtn">Subscribe</button>
+      <p id="subscribeMsg"></p>
+    </section>
+
+    <!-- Feedback Page -->
+    <section id="feedback" class="page">
+      <h2>Send Feedback</h2>
+      <textarea id="feedbackText" placeholder="Your message..."></textarea>
+      <button id="sendFeedback">Send</button>
+      <p id="feedbackMsg"></p>
+    </section>
+  </main>
+
+  <!-- Hidden Admin Panels (triggered by secret keys) -->
+  <div id="adminLeon" class="admin-panel"></div>
+  <div id="adminEnd" class="admin-panel"></div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
